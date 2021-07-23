@@ -1,7 +1,6 @@
 package com.example.MediScreen.model;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Entity
 @Table(name = "patient")
@@ -12,7 +11,7 @@ public class Patient {
     @Column(name = "p_name")
     String patientName;
     @Column(name = "f_name")
-    String FamilyName;
+    String familyName;
     @Column(name = "dob")
     String dateOfBirth;
     String sex;
@@ -38,11 +37,11 @@ public class Patient {
     }
 
     public String getFamilyName() {
-        return FamilyName;
+        return familyName;
     }
 
     public void setFamilyName(String familyName) {
-        FamilyName = familyName;
+        this.familyName = familyName;
     }
 
     public String getDateOfBirth() {
@@ -82,7 +81,7 @@ public class Patient {
         return "Patient{" +
                 "id=" + id +
                 ", patientName='" + patientName + '\'' +
-                ", FamilyName='" + FamilyName + '\'' +
+                ", FamilyName='" + familyName + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
                 ", sex='" + sex + '\'' +
                 ", homeAddress='" + homeAddress + '\'' +
