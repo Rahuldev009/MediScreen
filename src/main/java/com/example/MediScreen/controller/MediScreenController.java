@@ -34,7 +34,7 @@ public class MediScreenController {
     public ModelAndView adminHome(Model model) {
         logger.info("home page after login");
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("redirect:/patient/list");
+        modelAndView.setViewName("redirect:patient/list");
         return modelAndView;
     }
 
@@ -113,7 +113,7 @@ public class MediScreenController {
      * @return ModelAndView
      */
     @PostMapping("/patient/update/{id}")
-    public ModelAndView updateBid(@PathVariable("id") Integer id, @Valid Patient patient,
+    public ModelAndView updatePatient(@PathVariable("id") Integer id, @Valid Patient patient,
                                   BindingResult result, Model model) {
         ModelAndView modelAndView = new ModelAndView();
         if (result.hasErrors()) {
@@ -171,7 +171,7 @@ public class MediScreenController {
     }
 
     /**
-     * HTTP POST request to return the request patient data on the basis of ID
+     * HTTP GET request to return the request patient data on the basis of ID
      * @param id
      * @return PatientDto
      */
