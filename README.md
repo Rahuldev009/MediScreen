@@ -1,12 +1,14 @@
 # MediScreen
+## Technical
+Framework: 
+* Spring Boot
+* Java 
+* Maven 
+* Jacoco 
+* Docker 
 
-Technical
-Framework: Spring Boot
-Java
-Maven
-Jacoco
-Docker
-Structure
+##
+Structure 
 The application is divided into three microservices for the following tasks:
 
 https://github.com/rahuljajoria/MediScreen: manages patient demographic information stored in MySQL DB
